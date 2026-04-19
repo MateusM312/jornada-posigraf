@@ -108,3 +108,8 @@ button{
 button:hover{
     cursor: pointer;
 }
+
+#checkbox{
+    margin: 0 5px 0 0;
+    accent-color: white;
+}
