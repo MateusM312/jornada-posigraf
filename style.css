@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('posigraf.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: rgba(255, 255, 255, .2) 2px solid;
+    border-radius: 15px;
+    padding: 5%;
+    width: 420px;
+}
+
+h1, h2{
+    text-align: center;
+    margin: 0%;
+}
+
+h2{
+    margin: 8%;
+}
+
+
+.login{
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    position: relative;
+    padding: 0 0 65px 0;
+}
+
+.login input{
+    outline: none;
+    border: none;
+    border: white 1px solid;
+    border-radius: 46px;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    margin: 2px 0 15px 0;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.login p{
+    padding: 0 0 0 0;
+    font-size: 16px;
+    position: relative;
+    left: 5px;
+    margin: 15px 0 5px 5px;
+}
+
+.foot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.foot a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login i{
+    position: absolute;
+    right: 20px;
+    top: 70%;
+    transform: translateY(-50%);
+}
+
+.foot{
+    display: flex;
+    justify-content: space-between;
+}
+
+hr{
+    border: none;
+    border: white solid 1px;
+    border-radius: 100%;
+}
+
+button{
+    width: 100%;
+    background-color: transparent;
+    padding: 2%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 40px;
+    margin: 15px 0px 0px 0px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.375);
+}
+
+button:hover{
+    cursor: pointer;
+}
