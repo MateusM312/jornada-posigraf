@@ -86,4 +86,4 @@ posigraf-site/
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Mateus** como projeto acadêmico na **UniSENAI Paraná**.
+Desenvolvido por **Mateus, Caio, Nicolas e Fernando** como projeto acadêmico na **UniSENAI Paraná**.
