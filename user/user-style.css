@@ -29,6 +29,9 @@ th{
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 3%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
 }
 
 button{
