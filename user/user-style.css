@@ -83,6 +83,23 @@ footer{
     justify-content: space-around;
 }
 
+table{
+    border-style: hidden;
+}
+
+iframe{
+    width: 100%;
+}
+
+hr{
+    border-radius: 6px;
+    margin: 5% 2%;
+}
+
+.mapa{
+    margin: 6px 0;
+}
+
 .politica{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
