@@ -1,3 +1,10 @@
+// A Idéia é que com a função de baixo possamos pegas as informaçoes colocadas na pasta tabela-criar e passar para html
+
+function acessTypeInfo(){
+    alert("On Progress");
+}
+
+// Seletor de Módulo
 
 function activeInfo(index) {
     let modules = document.getElementsByClassName("modules");
