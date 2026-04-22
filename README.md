@@ -1,4 +1,4 @@
-# 🖨️ Posigraf — Sistema de Gestão RH
+# 🖨️ POSIGRAF — Sistema de Gestão RH
 
 > Projeto acadêmico em desenvolvimento. Sistema web para gestão de Recursos Humanos da Posigraf.
 

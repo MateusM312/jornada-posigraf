@@ -4,49 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração POSIGRAF</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="adm-style.css">
 </head>
 <body>
-    <header>
-        <h1> <img src="../icone-posigraf.png"w width="50"  alt="marca-posigraf.png">POSIGRAF</h1>
-        <a href="../index.html"><button id="sair">sair</button></a>
-    </header>
+    <div id="main">
 
+        <div class="my-sidebar" style="display: none;" id="sidebar">
+            <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
+            <a href="#" class="bar-item">Alunos</a>
+            <a href="#" class="bar-item">Professores</a>
+            <a href="#" class="bar-item">Funcionarios</a>
+            <a href="#" class="bar-item">Cursos</a>
+        </div>
+
+        <header id="headerpage">
+            <h1> <img src="../icone-posigraf.png"w width="50"  alt="marca-posigraf.png">POSIGRAF <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
+            <a href="../index.html"><button id="sair">sair</button></a>
+        </header>
     <div class="all">
-        <div class="slideshow">
-
-            <div class="slide">
-                <div class="inside-text">1 / 2</div>
-                <img src="../posigraf.png" width=" 680" alt="foto-exemplar-posigraf">
-                <div class="text">QG POSIGRAF</div>
+            <div class="slideshow">
+                <div class="slide">
+                    <div class="inside-text">1 / 2</div>
+                    <img src="../posigraf.png" width=" 680" alt="foto-exemplar-posigraf">
+                    <div class="text">QG POSIGRAF</div>
+                </div>
+                <div class="slide">
+                    <div class="inside-text">2 / 2</div>
+                    <img src="trabalhando.jpg" width=" 680" alt="foto-exemplar-trabalho">
+                    <div class="text">Exemplo POSIGRAF</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="slide">
-                <div class="inside-text">2 / 2</div>
-                <img src="trabalhando.jpg" width=" 680" alt="foto-exemplar-trabalho">
-                <div class="text">Exemplo POSIGRAF</div>
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
             </div>
-
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-
-        <div style="text-align: center;">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
-    </div>
-
-    <footer>
-        <div class="politica">
-            <p>Política de Cookies</p>
-            <p>Área de Privacidade</p>
-            <p>Política de Pivacidade</p>
-        </div>
-        <div class="reservado">
-            <p>© Posigraf 2026. Todos os direitos reservados. </p>
-        </div>
-        <div class="direito">
-            <p>Desenvolvido no Brasil pelos <b>Alunos</b> Unisenai PR</p>
+                </div>
+            
+                <footer>
+            <div class="politica">
+                <p>Política de Cookies</p>
+                <p>Área de Privacidade</p>
+                <p>Política de Pivacidade</p>
+            </div>
+            <div class="reservado">
+                <p>© Posigraf 2026. Todos os direitos reservados. </p>
+            </div>
+            <div class="direito">
+                <p>Desenvolvido no Brasil pelos <b>Alunos</b> Unisenai PR</p>
+            </div>
         </div>
     </footer>
     <script src="adm-script.js"></script>
