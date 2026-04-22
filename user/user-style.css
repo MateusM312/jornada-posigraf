@@ -134,3 +134,16 @@ hr{
     font-size: 12px;
     color: gray;   
 }
+
+button.active {
+    background-color: #53ff6d;
+    color: white;
+}
+
+.modules{
+    display: none;
+}
+
+.modules.active{
+    display: block;
+}
