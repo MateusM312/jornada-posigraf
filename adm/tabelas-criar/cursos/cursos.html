@@ -6,13 +6,25 @@
     <title>Alunos - POSIGRAF</title>
     <link rel="stylesheet" href="../adm-style.css">
     <link rel="stylesheet" href="cursos-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div id="main">
         <header id="headerpage">
-            <h1> <img src="../../../icone-posigraf.png"w width="50"  alt="marca-posigraf.png">POSIGRAF <i class="fa-solid fa-bars"></i></h1>
+            <h1> <img src="../../../icone-posigraf.png"w width="50"  alt="marca-posigraf.png">POSIGRAF <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
             <a href="../../../index.html"><button id="sair">sair</button></a>
         </header>
+
+        <div class="my-sidebar" style="display: none;" id="sidebar">
+            <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
+            <!-- adicionar novos links -->
+            <a href="../../adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
+            <a href="#" class="bar-item">Alunos <i class="fa-solid fa-hammer"></i></a>
+            <a href="#" class="bar-item">Professores <i class="fa-solid fa-hammer"></i></a>
+            <a href="#" class="bar-item">Funcionarios <i class="fa-solid fa-hammer"></i></a>
+            <a href="tabelas-criar/cursos/cursos.html" class="bar-item">Cursos <i class="fa-solid fa-school"></i></a>
+        </div>
+
 
         <div class="container">
             <h2>Gerenciar Alunos</h2>
