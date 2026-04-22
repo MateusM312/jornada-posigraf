@@ -13,7 +13,7 @@ h1{
 }
 
 img {
-  filter: contrast(1.2) brightness(0.95); /* mais impacto visual */
+
   box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* sombra para dar peso */
   border: 2px solid #333;
   border-radius: 0;
