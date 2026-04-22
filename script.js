@@ -12,6 +12,15 @@ const N_USUARIO ={
 function fazerLogin(){
     const cpf = document.getElementById("inputCPF").value.trim();
     const senha = document.getElementById("inputSenha").value.trim();
+    const lembrar = document.getElementById("lembrarsenha").checked;
+
+    if (lembrar){
+        localStorage.setItem('cpfSalvo', cpf);
+        localStorage.setItem('senhaSalvo', senha);
+    }else{
+        localStorage.removeItem('cpfSalvo');
+        localStorage.removeItem('senhaSalvo');
+    }
 
     if (!cpf || !senha){
         alert('Preencha todos os campos!');
@@ -26,5 +35,16 @@ function fazerLogin(){
         window.location.href = 'user/user.html';
     } else {
         alert("CPF ou senha incorreta!");
+    }
+}
+
+window.onload = function(){
+    const cpfSalvo = localStorage.getItem("cpfSalvo");
+    const senhaSalvo = localStorage.getItem("senhaSalvo");
+
+    if (cpfSalvo && senhaSalvo){
+        document.getElementById('inputCPF').value = cpfSalvo;
+        document.getElementById('inputSenha').value = senhaSalvo;
+        document.getElementById('lembrarsenha').checked = true;
     }
 }
