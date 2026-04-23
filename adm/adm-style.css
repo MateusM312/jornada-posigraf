@@ -5,6 +5,12 @@
     padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
@@ -28,15 +34,17 @@ header{
     top: 0;
 }
 
+/* footer - tire o position: absolute e top: 100% */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 8px 24px;
-    position: absolute;
-    top: 100%;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 24px;
+  /* REMOVIDO: position: absolute; top: 100%; */
 }
+
 /* SIDEBAR */
 .my-sidebar {
   height: 100%;
@@ -78,6 +86,13 @@ footer {
   margin: 0;
   border: none;
   border-radius: 0;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* ocupa o espaço restante do body */
+  min-height: 100vh;
 }
 
 .my-sidebar button:hover{
