@@ -5,6 +5,15 @@
     src: url('arialroundedmtbold.ttf') format('truetype');
 }
 
+/* Icones */
+
+.fa-instagram {
+    background: linear-gradient(#405DE6, #5B51D8, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 /* Tudo relacionado ao Header */
 
 body {
@@ -36,6 +45,15 @@ h1{
     display: flex;
     align-items: center;
     gap: 3%;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right,transparent, #000000, transparent);
+    border-radius: 999px;
+    margin: 8px 0 16px 0;
+    opacity: 0.4;
 }
 
 button{
@@ -96,20 +114,66 @@ button:hover{
     margin: 0 0 10px 0;
 }
 
-hr{
-    width: 100%;
-}
-
 /* Grid de CURSOS REALIZADOS */
 
-.cursos-realizados
+.cursos-realizados{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: fit-content;
+    
+    grid-column: 2;
+    grid-row: 1;
+    padding: 5%;
 
+    background-color: #D4EAFC;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.248);
+}
+
+.cursos-realizados p, h3{
+    padding: 0;
+    margin: 0;
+}
+
+.cursos-realizados p{
+    margin: 0 0 10px 0;
+}
+
+/* grid Contatos */
+
+.contatos{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: fit-content;
+    
+    grid-column: 2;
+    grid-row: 2;
+    padding: 5%;
+
+    background-color: #D4EAFC;
+    border: none;
+    border-radius: 32px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.248);
+}
+
+.contatos p, h3{
+    padding: 0;
+    margin: 0;
+}
+
+.contatos p{
+    margin: 0 0 10px 0;
+}
 /* footer */
 
 .politica{
     display: flex;
     justify-content: space-around;  
     margin: 6px 12px;
+    flex-direction: row;
 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -119,6 +183,16 @@ hr{
 
 .politica p{
     margin: 0 12px;
+
+    display: flex;
+    justify-content: space-around;  
+    margin: 6px 12px;
+    flex-direction: row;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: #0026ff;
 }
 
 .direito{
