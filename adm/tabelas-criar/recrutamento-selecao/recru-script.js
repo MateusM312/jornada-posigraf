@@ -1,6 +1,19 @@
 // Carrega do localStorage ou começa vazio
 let alunos = JSON.parse(localStorage.getItem('alunos')) || [];
 
+function open_sidebar() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("sidebar").style.width = "25%";
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("openav").style.display = "none";
+}
+
+function close_sidebar() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("sidebar").style.display = "none";
+    document.getElementById("openav").style.display = "inline-block";
+}
+
 function salvar() {
     const index = parseInt(document.getElementById('editIndex').value);
     const nome  = document.getElementById('inputNome').value.trim();
@@ -70,8 +83,8 @@ function renderTabela() {
                 <td>${a.curso}</td>
                 <td>${a.email}</td>
                 <td>
-                    <button class="btn-editar" onclick="editar(${i})">✏️ Editar</button>
-                    <button class="btn-excluir" onclick="excluir(${i})">🗑️ Excluir</button>
+                    <button class="btn-editar" onclick="editar(${i})"><i class="fa-solid fa-pencil"></i> Editar</button>
+                    <button class="btn-excluir" onclick="excluir(${i})"><i class="fa-solid fa-trash"></i> Excluir</button>
                 </td>
             </tr>`;
     });

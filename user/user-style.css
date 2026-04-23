@@ -26,6 +26,16 @@ th{
     color: white;
 }
 
+.fa-circle-user{
+    font-size: 30px;
+    align-items: center;
+}
+
+.fa-circle-user:hover{
+    cursor: pointer;
+    color:#536DFF;
+}
+
 h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 3%;
@@ -55,11 +65,17 @@ button:hover{
     color: #ffff;    
 }
 
-header{
+header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    height: 80px;
+    width: 100%;
+    background-color: #fff; /* importante pro sticky funcionar visualmente */
+    box-sizing: border-box;
+    padding: 10px 20px;
 }
 
 .all{
