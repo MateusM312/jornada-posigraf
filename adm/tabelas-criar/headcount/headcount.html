@@ -12,81 +12,253 @@
 
         <div class="my-sidebar" style="display: none;" id="sidebar">
             <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
-            <!-- adicionar novos links -->
-        <a href="../../adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
+            <a href="../../adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
             <a href="../alunos/alunos.html" class="bar-item">Alunos <i class="fa-solid fa-school"></i></a>
             <a href="../recrutamento-selecao/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
             <a href="#" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
         </div>
 
         <header id="headerpage">
-            <h1> <img src="../../../icone-posigraf.png"w width="50"  alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
+            <h1><img src="../../../icone-posigraf.png" width="50" alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
             <button id="sair" onclick="window.location.href='../index.html'">Sair</button>
         </header>
 
-        <!-- grid com todos os modulos -->
-        <div class="grid-headcount">
+        <div class="content-wrapper">
 
-            <!-- Total de funcionarios -->
-            <div class="total-func">
-                <h3>Total de funcionários</h3>
-                <h2 id="total" onclick="editar(this)">275</h2>
+            <div class="atualizar">
+                <h2>SETORES</h2>
 
-                <div>
-                    <div class="barra-back" style="margin-bottom: 2%;">
-                        <div id="barra-cheia" class="barra-cheia"></div>
-                    </div>
-                    <div style="display: flex;">
-                        <p>
-                            <span id="howmany" onclick="editar(this)">144</span> ativos · 
-                            <span id="total-%">91,6%</span>
-                        </p>                    
+                <hr>
+
+                <div class="setores">
+                    <h4>Produção</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+                
+                <div class="setores">
+                    <h4>Rec. Humanos</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>Financeiro</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>Logística</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>Manutenção</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>Administrativo</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>TI</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+
+                <div class="setores">
+                    <h4>Comercial</h4>
+
+                    <p style="display: flex;">Total func. <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Ativos <input type="number" name="0" value="0" id=""></p>
+                    
+                    <p style="display: flex;">Desligados <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Admissões <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Turnover% <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Absentismo% <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">Homens <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Mulheres <input type="number" name="0" value="0" id=""></p>
+
+                    <p style="display: flex;">PCD <input type="number" value="0" id=""></p>
+                    <p style="display: flex;">Aprendizes <input type="number" name="0" value="0" id=""></p>
+                </div>
+            </div>
+
+            <div class="grid-headcount">
+
+                <!-- Total de funcionarios -->
+                <div class="total-func">
+                    <h3>Total de funcionários</h3>
+                    <h2 id="total" onclick="editar(this)">275</h2>
+                    <div>
+                        <div class="barra-back" style="margin-bottom: 2%;">
+                            <div id="barra-cheia" class="barra-cheia"></div>
+                        </div>
+                        <div style="display: flex;">
+                            <p>
+                                <span id="howmany" onclick="editar(this)">144</span> ativos · 
+                                <span id="total-%">91,6%</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-            </div>
-
-            <!-- admissão do mês -->
-            <div class="total-func" style="grid-row: 1; grid-column: 2;">
-                <h3>Admissão no mês</h3>
-                <h2 onclick="editar(this)" id="mes">26</h2>
-                <div>
-                    <div class="barra-back" style="margin-bottom: 2%;">
-                        <div class="barra-cheia" id="barrames" style="background-color: #59ff53;"></div>
-                    </div>
-                    <div style="display: flex;">
-                        <p>
-                            <span id="admissao">+9,4%</span>
-                            <span>sobre headcount</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Desligamento do mês -->
-            <div class="total-func" style="grid-row: 1; grid-column: 3;">
-                <h3>Desligamentos no mês</h3>
-                <h2 onclick="editar(this)" id="deslig">17</h2>
-                <div>
-                    <div class="barra-back" style="margin-bottom: 2%;">
-                        <div class="barra-cheia" id="barradeslig" style="background-color: #ff9853;"></div>
-                    </div>
-                    <div style="display: flex;">
-                        <p>
-                            <span>Saldo:</span>
-                            <span id="saldo">+9</span>
-                            <span>pessoas</span>
-                        </p>
+                <!-- Admissão do mês -->
+                <div class="total-func" style="grid-row: 1; grid-column: 2;">
+                    <h3>Admissão no mês</h3>
+                    <h2 onclick="editar(this)" id="mes">26</h2>
+                    <div>
+                        <div class="barra-back" style="margin-bottom: 2%;">
+                            <div class="barra-cheia" id="barrames" style="background-color: #59ff53;"></div>
+                        </div>
+                        <div style="display: flex;">
+                            <p>
+                                <span id="admissao">+9,4%</span>
+                                <span>sobre headcount</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- PCD + Aprendizes -->
-            <div class="pcd">
+                <!-- Desligamento do mês -->
+                <div class="total-func" style="grid-row: 1; grid-column: 3;">
+                    <h3>Desligamentos no mês</h3>
+                    <h2 onclick="editar(this)" id="deslig">17</h2>
+                    <div>
+                        <div class="barra-back" style="margin-bottom: 2%;">
+                            <div class="barra-cheia" id="barradeslig" style="background-color: #ff9853;"></div>
+                        </div>
+                        <div style="display: flex;">
+                            <p>
+                                <span>Saldo:</span>
+                                <span id="saldo">+9</span>
+                                <span>pessoas</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PCD + Aprendizes -->
+                <div class="total-func" style="grid-row: 1; grid-column: 4;">
+                    <h3>PCD + Aprendizes</h3>
+                    <h2 onclick="editar(this)" id="NPcds">30</h2>
+                    <div>
+                        <div class="barra-back" style="margin-bottom: 2%;">
+                            <div class="barra-cheia" id="barrapcd" style="background-color: #e8ff53;"></div>
+                        </div>
+                        <div style="display: flex;">
+                            <p>
+                                <span>10</span>
+                                <span>PCD ·</span>
+                                <span>20</span>
+                                <span>aprendizes</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
-            
+
         <footer>
             <div class="politica">
                 <p>Política de Cookies</p>
@@ -94,12 +266,13 @@
                 <p>Política de Pivacidade</p>
             </div>
             <div class="reservado">
-                <p>© Posigraf 2026. Todos os direitos reservados. </p>
+                <p>© Posigraf 2026. Todos os direitos reservados.</p>
             </div>
             <div class="direito">
                 <p>Desenvolvido no Brasil pelos <b>Alunos</b> Unisenai PR</p>
             </div>
         </footer>
+
     </div>
     <script src="headcount-script.js"></script>
 </body>
