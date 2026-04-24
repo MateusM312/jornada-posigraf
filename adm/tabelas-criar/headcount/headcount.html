@@ -47,13 +47,38 @@
             </div>
 
             <!-- admissão do mês -->
-            <div class="adm-mes">
-
+            <div class="total-func" style="grid-row: 1; grid-column: 2;">
+                <h3>Admissão no mês</h3>
+                <h2 onclick="editar(this)" id="mes">26</h2>
+                <div>
+                    <div class="barra-back" style="margin-bottom: 2%;">
+                        <div class="barra-cheia" id="barrames" style="background-color: #59ff53;"></div>
+                    </div>
+                    <div style="display: flex;">
+                        <p>
+                            <span id="admissao">+9,4%</span>
+                            <span>sobre headcount</span>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- Desligamento do mês -->
-            <div class="desligamento">
-
+            <div class="total-func" style="grid-row: 1; grid-column: 3;">
+                <h3>Desligamentos no mês</h3>
+                <h2 onclick="editar(this)" id="deslig">17</h2>
+                <div>
+                    <div class="barra-back" style="margin-bottom: 2%;">
+                        <div class="barra-cheia" id="barradeslig" style="background-color: #ff9853;"></div>
+                    </div>
+                    <div style="display: flex;">
+                        <p>
+                            <span>Saldo:</span>
+                            <span id="saldo">+9</span>
+                            <span>pessoas</span>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <!-- PCD + Aprendizes -->
