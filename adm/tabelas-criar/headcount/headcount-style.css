@@ -22,12 +22,13 @@ img {
   width: 100%;
 }
 
-header{
+header {
     display: flex;
-    margin: 4%;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    background-color: white; /* evita transparência sobre o grid */
+    z-index: 10;
 }
 
 /* footer - tire o position: absolute e top: 100% */
@@ -205,6 +206,10 @@ button:hover{
   width: 100%;
   height: 6px;
   border-radius: 3px;
+}
+
+#howmany, #total{
+  user-select: all;
 }
 
 input {
