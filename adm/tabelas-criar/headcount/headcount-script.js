@@ -13,9 +13,11 @@ function close_sidebar() {
 
 let total_func, ativos_total, admissoes_total;
 
-
+// Soma o total de funcionarios e ativos
 function add_total_func(){
+  // Total de funcionarios
   const inputs = document.querySelectorAll('.somar-func');
+  // Total de ativos
   const inputs_ativos = document.querySelectorAll('.ativosT');
 
   const total__ativos = Array.from(inputs_ativos).reduce((sum, input) => {
@@ -30,6 +32,7 @@ function add_total_func(){
   total_func = total;
 }
 
+// Soma o total de admissoes do mes de cada departamento
 function add_total_adimissoes(){
   const admissoes = document.querySelectorAll('.admissoesT');
 
@@ -40,6 +43,7 @@ function add_total_adimissoes(){
   admissoes_total = total_admissoes;
 }
 
+// Atualiza com os dados somados
 function atualizar_board_admissao(){
   const num_mes = Number(document.getElementById('mes').innerText);
   const barra = document.getElementById('barrames');
@@ -52,6 +56,7 @@ function atualizar_board_admissao(){
   document.getElementById('mes').innerText = admissoes_total || 0;
 }
 
+// Atualiza com os dados somados
 document.getElementById('barra-cheia').style.width = 0 + '%';
 
 function atualizar_total_func_board(){
@@ -79,6 +84,7 @@ function atualizar_total_func_board(){
   }
 }
 
+// É chamado quando o botão de atualização é apertado
 function atualizacoes(){
   add_total_adimissoes();
   add_total_func();
