@@ -93,22 +93,45 @@ footer {
 
 /* ATUALIZAR SIDEBAR */
 .atualizar {
+  display: flex;
+  flex-direction: column;
     width: 250px;
-    height: calc(100vh - 70px);
+    height: calc(100vh - 160px);
     overflow-y: auto;
     flex-shrink: 0;
     padding: 1%;
     background-color: rgb(255, 255, 255);
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.334);
 }
+
 .setores {
-    border: 1px black solid;
+    border: none;
     border-radius: 12px;
-    padding: 1%;
+    padding: 5%;
     margin-top: 3%;
+
+    background-color:#ffae56;
+    box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.248);
 }
 .setores input {
     text-align: end;
+    background-color: transparent;
+}
+.atualizar h2{
+  margin-bottom: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.521);
+  color: white;
+}
+
+.atualizar hr {
+    display: block;
+    border-radius: 32px;
+    background: linear-gradient(to left, transparent, black, transparent);
+    height: 2px; /* aumenta um pouco */
+    border: 6;
+    margin: 8px 0; /* garante espaço ao redor */
+    min-width: 100%; /* ocupa toda a largura */
 }
 
 /* BOTÃO MENU */
