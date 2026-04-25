@@ -13,7 +13,7 @@ function close_sidebar() {
 
 // --------------------------------------------------------------SOMAS-------------------------------------------------
 
-let total_func, ativos_total, admissoes_total;
+let total_func, ativos_total, admissoes_total, desligamentos_total;
 
 // Soma o total de funcionarios e ativos
 function add_total_func(){
@@ -34,6 +34,26 @@ function add_total_func(){
   total_func = total;
 }
 
+let total_pcd, total_aprendizes, total_ambos_pcdapr;
+
+// Soma o total de PCD com Aprendizes e te apresenta o resultado
+function add_pcd_aprendizes(){
+  const pcd = document.querySelectorAll(".pcdT");
+  const aprendizes = document.querySelectorAll(".aprendizesT");
+
+  const pcd_total = Array.from(pcd).reduce((sum, input) => {
+    return sum + (Number(input.value) || 0);
+  }, 0);
+
+  const aprendizes_total = Array.from(aprendizes).reduce((sum, input) => {
+    return sum + (Number(input.value) || 0);
+  }, 0);
+
+  total_pcd = pcd_total;
+  total_aprendizes = aprendizes_total;
+  total_ambos_pcdapr = pcd_total + aprendizes_total;
+}
+
 // Soma o total de admissoes do mes de cada departamento
 function add_total_adimissoes(){
   const admissoes = document.querySelectorAll('.admissoesT');
@@ -45,31 +65,57 @@ function add_total_adimissoes(){
   admissoes_total = total_admissoes;
 }
 
+// Add total desligamento por departamento
+function add_total_desligamentos(){
+  const desligamentos = document.querySelectorAll('.desligamentosT');
+
+  const total_desligamentos = Array.from(desligamentos).reduce((sum, input) => {
+    return sum + (Number(input.value) || 0);
+  }, 0);
+
+  desligamentos_total = total_desligamentos;
+}
+
 // --------------------------------------------------------------Atualizaçoes-------------------------------------------------
 
-// Atualiza com os dados somados
+// Atualiza com os dados de pcd e desligamentos
+function atualizar_board_pcd(){
+  const barra = (total_ambos_pcdapr * 100) / total_func;
+  const barra_segura = isFinite(barra) ? barra : 0 ;
+
+  document.getElementById('barrapcd').style.width = barra_segura + "%";
+  document.getElementById('NPcds').innerText = total_ambos_pcdapr || 0;
+  document.getElementById('pcd-span').innerText = total_pcd || 0;
+  document.getElementById('aprendizes-span').innerText = total_aprendizes || 0;
+}
+
+// Atualiza com os dados somados admissoes
 function atualizar_board_admissao(){
-  const num_mes = Number(document.getElementById('mes').innerText);
-  const barra = document.getElementById('barrames');
-
   let porcentagem_barra = (admissoes_total / total_func) * 100;
+  let saldo = admissoes_total - desligamentos_total;
   const porcen_segura = isFinite(porcentagem_barra) ? porcentagem_barra : 0;
+  const saldo_seguro = isFinite(saldo) ? saldo : 0;
 
-  document.getElementById('admissao').innerText = porcen_segura.toFixed(1) + '%';
+  document.getElementById('admissao').innerText = "+" + saldo_seguro;
   document.getElementById('barrames').style.width = porcen_segura + '%';
   document.getElementById('mes').innerText = admissoes_total || 0;
 }
 
-// Atualiza com os dados somados
+// Atualiza com dados somados desligamentos
+function atualizar_board_desligamentos(){
+  let porcentagem_abrra = (desligamentos_total / total_func) * 100;
+  const porcen_segura = isFinite(porcentagem_abrra) ? porcentagem_abrra : 0;
+  const total_seguro = isFinite(desligamentos_total) ? desligamentos_total : 0;
+
+  document.getElementById('deslig').innerText = desligamentos_total || 0;
+  document.getElementById('saldo').innerText = "+" + total_seguro + "%";
+  document.getElementById('barradeslig').style.width = porcen_segura + '%';
+}
+
+// Atualiza com os dados somados funcionarios
 document.getElementById('barra-cheia').style.width = 0 + '%';
 
 function atualizar_total_func_board(){
-  const total = Number(document.getElementById('total').innerText);
-  const barra_func = document.getElementById('barra-cheia').style.width;
-
-  const barra = document.getElementById('barra-cheia').style.width;
-
-  const varios_ativos = Number(document.getElementById('howmany'));
   const porcentagem = (ativos_total * 100) / total_func;
   const porcentagemSegura = isFinite(porcentagem) ? porcentagem : 0;
 
@@ -94,13 +140,23 @@ function atualizar_total_func_board(){
 function atualizacoes(){
   add_total_adimissoes();
   add_total_func();
-}
+  add_total_desligamentos();
+  add_pcd_aprendizes();
 
-setInterval(() => {
+  atualizar_board_pcd();
   atualizar_total_func_board();
   atualizar_board_admissao();
-}, 500);
+  atualizar_board_desligamentos();
+}
+
+// setInterval(() => {
+
+// }, 500);
 
 window.onload = function(){
+  atualizar_total_func_board();
+  atualizar_board_admissao();
+  atualizar_board_desligamentos();
+  atualizar_board_pcd();
   console.log('Page Loaded!');
 }
