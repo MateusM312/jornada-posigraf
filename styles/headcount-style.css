@@ -215,7 +215,7 @@ button:hover {
 
 /* CARD GRANDE (linhas 2 e 3) */
 .card-grande {
-    height: 220px;
+    height: 100%;
 }
 
 .barra-back {
