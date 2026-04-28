@@ -29,10 +29,10 @@ function fazerLogin(){
 
     if (cpf === USUARIO.cpf && senha === USUARIO.senha) {
         localStorage.setItem('logado', 'true');
-        window.location.href = 'adm/adm.html';
+        window.location.href = 'pages/adm.html';
     } else if (cpf === N_USUARIO.cpf && senha === N_USUARIO.senha) {
         localStorage.setItem('logado', 'true');
-        window.location.href = 'user/user.html';
+        window.location.href = 'pages/user.html';
     } else {
         alert("CPF ou senha incorreta!");
     }

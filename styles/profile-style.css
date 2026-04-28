@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Arial-Rounded';
-    src: url('arialroundedmtbold.ttf') format('truetype');
+    src: url('../font-family/arialroundedmtbold.ttf') format('truetype');
 }
 
 /* Icones */

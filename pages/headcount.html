@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração POSIGRAF</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="headcount-style.css">
+    <link rel="stylesheet" href="../styles/headcount-style.css">
 </head>
 <body>
     <div id="main">
 
         <div class="my-sidebar" style="display: none;" id="sidebar">
             <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
-            <a href="../../adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
-            <a href="../alunos/alunos.html" class="bar-item">Alunos <i class="fa-solid fa-school"></i></a>
-            <a href="../recrutamento-selecao/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
+            <a href="adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
+            <a href="alunos.html" class="bar-item">Alunos <i class="fa-solid fa-school"></i></a>
+            <a href="recrutamento-selecao/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
             <a href="#" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
         </div>
 
         <header id="headerpage">
-            <h1><img src="../../../icone-posigraf.png" width="50" alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
+            <h1><img src="../img/icone-posigraf.png" width="50" alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
             <button id="sair" onclick="window.location.href='../index.html'">Sair</button>
         </header>
 
@@ -198,6 +198,11 @@
                 <!-- LINHA 2: 2 gráficos grandes -->
                 <div class="total-func card-grande" style="grid-row: 2; grid-column: 1 / 3;">
                     <h3>Turnover por setor</h3>
+                    <div>
+                        <div style="position: relative; height: 200px; width: 100%;">
+                            <canvas id="chart-turnover"></canvas>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="total-func card-grande" style="grid-row: 2; grid-column: 3 / 5;">
@@ -238,6 +243,8 @@
             </div>
         </footer>
     </div>
-    <script src="headcount-script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+    <script src="../scripts/headcount-script.js"></script>
+    <script src="../scripts/turnover.js"></script>
 </body>
 </html>
