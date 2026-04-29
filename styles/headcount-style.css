@@ -1,0 +1,246 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+img {
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 24px;
+}
+
+/* SIDEBAR */
+.my-sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    background-color: #1a1a2e;
+    padding-top: 50px;
+    overflow-x: hidden;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease;
+}
+.bar-item {
+    display: block;
+    padding: 12px 24px;
+    color: #c7ccd3;
+    text-decoration: none;
+    font-size: 15px;
+    border-left: 3px solid transparent;
+    transition: 0.2s ease;
+}
+.bar-item:hover {
+    background-color: #536DFF;
+    color: #fff;
+    border-left: 3px solid greenyellow;
+}
+.my-sidebar button {
+    background-color: white;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+}
+.my-sidebar button:hover {
+    background-color: #ff5353;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+}
+
+/* CONTENT WRAPPER */
+.content-wrapper {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* ATUALIZAR SIDEBAR */
+.atualizar {
+  display: flex;
+  flex-direction: column;
+    width: 250px;
+    height: calc(100vh - 160px);
+    overflow-y: auto;
+    flex-shrink: 0;
+    padding: 1%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.334);
+}
+
+.setores {
+    border: none;
+    border-radius: 12px;
+    padding: 5%;
+    margin-top: 3%;
+
+    background-color:#ffae56;
+    box-shadow: 6px 7px 12px rgba(0, 0, 0, 0.248);
+}
+.setores input {
+    text-align: end;
+    background-color: transparent;
+}
+.atualizar h2{
+  margin-bottom: 3%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.521);
+  color: white;
+}
+
+.atualizar hr {
+    display: block;
+    border-radius: 32px;
+    background: linear-gradient(to left, transparent, black, transparent);
+    height: 2px; /* aumenta um pouco */
+    border: 6;
+    margin: 8px 0; /* garante espaço ao redor */
+    min-width: 100%; /* ocupa toda a largura */
+}
+
+/* BOTÃO MENU */
+.bar-open {
+    padding: 3% 4%;
+}
+.bar-open:hover {
+    background-color: greenyellow;
+}
+
+/* FOOTER */
+.politica {
+    display: flex;
+    font-weight: 500;
+    font-size: 12px;
+    color: #0026ff;
+    justify-content: space-around;
+    margin: 6px 12px;
+}
+.politica p {
+    margin: 0 12px;
+}
+.direito {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: gray;
+}
+.direito b {
+    font-size: 14px;
+    font-weight: 700;
+    color: #536DFF;
+}
+.reservado {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    color: gray;
+}
+
+button {
+    background-color: white;
+    border: none;
+    border-radius: 32px;
+    padding: 12px 22px;
+    margin: 3%;
+    box-shadow: 1.5px 1.5px 4px rgba(0, 0, 0, 0.529);
+}
+button:hover {
+    cursor: pointer;
+    background-color: #536DFF;
+    color: #fff;
+}
+#sair:hover {
+    background-color: #ff5353;
+    color: #fff;
+}
+
+/* GRID HEADCOUNT */
+.grid-headcount {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 16px;
+    padding: 2%;
+    flex: 1;
+    align-content: start;
+}
+
+/* CARD PADRÃO (linha 1) */
+.total-func {
+    background-color: #D4EAFC;
+    border-radius: 32px;
+    box-shadow: 5px 7px 12px rgba(0, 0, 0, 0.411);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 6%;
+    width: 100%;
+    height: 150px;
+    user-select: none;
+}
+
+/* CARD GRANDE (linhas 2 e 3) */
+.card-grande {
+    height: 100%;
+}
+
+.barra-back {
+    background-color: gray;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+}
+.barra-cheia {
+    background-color: #ff5353;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+}
+#howmany, #total {
+    user-select: all;
+}
+input {
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 8px;
+    padding: 4px 3px;
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+}

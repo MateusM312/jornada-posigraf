@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alunos - POSIGRAF</title>
-    <link rel="stylesheet" href="../adm-style.css">
-    <link rel="stylesheet" href="recru-style.css">
+    <link rel="stylesheet" href="../styles/adm-style.css">
+    <link rel="stylesheet" href="../styles/alunos-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <div id="main">
         <header id="headerpage">
-            <h1> <img src="../../../icone-posigraf.png"w width="50"  alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
-            <a href="../../../index.html"><button id="sair">sair</button></a>
+            <h1> <img src="../img/icone-posigraf.png"w width="50"  alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
+            <a href="index.html"><button id="sair">sair</button></a>
         </header>
 
         <div class="my-sidebar" style="display: none;" id="sidebar">
             <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
             <!-- adicionar novos links -->
-            <a href="../../adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
+            <a href="adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
             <a href="#" class="bar-item">Alunos <i class="fa-solid fa-school"></i></a>
-            <a href="../recrutamento-selecao/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
-            <a href="../headcount/headcount.html" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
+            <a href="recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
+            <a href="headcount.html" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
         </div>
 
 
@@ -33,7 +33,7 @@
                 <input type="hidden" id="editIndex" value="-1">
                 <input type="text" id="inputNome" placeholder="Nome">
                 <input type="text" id="inputCurso" placeholder="Curso">
-                <input type="email" id="inputEmail" placeholder="E-mail">   
+                <input type="email" id="inputEmail" placeholder="E-mail">
                 <button onclick="salvar()">Salvar</button>
                 <button id="btnCancelar" onclick="cancelar()" style="display:none">Cancelar</button>
             </div>
@@ -54,6 +54,6 @@
         </div>
     </div>
 
-    <script src="recru-script.js"></script>
+    <script src="../scripts/alunos-script.js"></script>
 </body>
 </html>
