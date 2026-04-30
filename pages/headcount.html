@@ -78,7 +78,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -113,7 +113,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -148,7 +148,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -183,7 +183,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -218,7 +218,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -253,7 +253,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -288,7 +288,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -323,7 +323,7 @@
               Turnover% <input class="turnover-n" type="number" value="0" />
             </p>
             <p style="display: flex">
-              Absentismo% <input type="number" value="0" />
+              Absentismo% <input class="absentismo-n" type="number" value="0" />
             </p>
             <p style="display: flex">
               Homens <input type="number" value="0" />
@@ -344,6 +344,8 @@
             onclick="
               atualizacoes();
               turnOver_Dep();
+              absentismo();
+              atualizarRankingTurnover();
             "
           >
             Atualizar Dashboard
@@ -437,7 +439,9 @@
             <h3>Absentismo por setor</h3>
             <div>
               <div style="position: relative; height: auto; width: 100%">
-                <canvas id="absentismo-chart"></canvas>
+                <div style="position: relative; height: auto; width: 100%">
+                  <canvas id="absentismo-chart"></canvas>
+                </div>
               </div>
             </div>
           </div>
@@ -472,11 +476,11 @@
                     <p>Rec. Humanos</p>
                   </div>
                   <div>
-                    <p>10%</p>
-                    <p>10%</p>
-                    <p>8.5%</p>
-                    <p>8.5%</p>
-                    <p>6.6%</p>
+                    <p>0%</p>
+                    <p>0%</p>
+                    <p>0%</p>
+                    <p>0%</p>
+                    <p>0%</p>
                   </div>
                 </div>
               </div>
@@ -507,14 +511,14 @@
                   <div class="barra-dist"></div>
                 </div>
                 <div class="dist-qtd">
-                  <p>120</p>
-                  <p>35</p>
-                  <p>30</p>
-                  <p>25</p>
-                  <p>20</p>
-                  <p>18</p>
-                  <p>15</p>
-                  <p>12</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
+                  <p>0</p>
                 </div>
               </div>
             </div>
@@ -526,10 +530,10 @@
                 <div class="barra-masc"><div class="barra-fem"></div></div>
                 <div class="legenda">
                   <p style="margin: 0">
-                    🔵 Homens <span>165</span> <span>(60%)</span>
+                    🔵 Homens <span>0</span> <span>(0%)</span>
                   </p>
                   <p style="margin: 0">
-                    🩷 Mulheres <span>110</span> <span>(40%)</span>
+                    🩷 Mulheres <span>0</span> <span>(0%)</span>
                   </p>
                 </div>
 
@@ -538,9 +542,9 @@
                 <div>
                   <h5>Maior presença feminina</h5>
                   <div class="rank-gen">
-                    <p>Rec. <span class="content-gen">66%</span></p>
-                    <p>Administrativo. <span class="content-gen">61%</span></p>
-                    <p>Financeiro. <span class="content-gen">60%</span></p>
+                    <p>Rec. <span class="content-gen">0%</span></p>
+                    <p>Administrativo. <span class="content-gen">0%</span></p>
+                    <p>Financeiro. <span class="content-gen">0%</span></p>
                   </div>
                 </div>
               </div>
@@ -567,5 +571,6 @@
     <script src="../scripts/headcount-script.js"></script>
     <script src="../scripts/turnover.js"></script>
     <script src="../scripts/chart-absentismo-script.js"></script>
+    <script src="../scripts/ranking.js"></script>
   </body>
 </html>

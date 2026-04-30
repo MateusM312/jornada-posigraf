@@ -1,41 +1,42 @@
-const ctx = document.getElementById('absentismo-chart');
+// Espera o DOM carregar antes de inicializar
+document.addEventListener("DOMContentLoaded", function () {
+  const ctx = document.getElementById("absentismo-chart");
 
-const setores = document.querySelectorAll('.setores');
-
-const dados = Array.from(setores).map(setor => {
-    const inputs = setor.querySelectorAll('input');
-    return {
-        nome:     setor.querySelector('h4').innerText,
-        total:    Number(inputs[0].value),
-        ativos:   Number(inputs[1].value),
-        deslig:   Number(inputs[2].value),
-        admiss:   Number(inputs[3].value),
-        turnover: Number(inputs[4].value),
-        abs:      Number(inputs[5].value),
-        homens:   Number(inputs[6].value),
-        mulheres: Number(inputs[7].value),
-        pcd:      Number(inputs[8].value),
-        apr:      Number(inputs[9].value),
-    };
-});
-
-const labels  = dados.map(s => s.nome);
-const turnover = dados.map(s => s.turnover);
-
-new Chart(ctx, {
-    type: 'bar',
+  let chart = new Chart(ctx, {
+    type: "bar",
     data: {
-        labels: labels,
-        datasets: [{
-            label: 'Turnover %',
-            data: turnover,
-            backgroundColor: '#536DFF',
-            borderWidth: 1
-        }]
+      labels: [
+        "Prod.",
+        "Rec.",
+        "Fina.",
+        "Logí.",
+        "Manu.",
+        "Admi.",
+        "T.I.",
+        "Come.",
+      ],
+      datasets: [
+        {
+          label: "Absentismo em %",
+          data: [0, 0, 0, 0, 0, 0, 0, 0],
+          borderWidth: 1,
+        },
+      ],
     },
     options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: { y: { beginAtZero: true } }
-    }
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+
+  // Expõe a função globalmente para o botão onclick conseguir chamar
+  window.absentismo = function () {
+    const elementos = document.querySelectorAll(".absentismo-n");
+    const valores = Array.from(elementos).map((el) => Number(el.value));
+    chart.data.datasets[0].data = valores; // sem colchetes!
+    chart.update();
+  };
 });
