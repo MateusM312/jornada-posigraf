@@ -1,5 +1,5 @@
 // Carrega do localStorage ou começa vazio
-let alunos = JSON.parse(localStorage.getItem('alunos')) || [];
+let recrutamento = JSON.parse(localStorage.getItem('recrutamento')) || [];
 
 function open_sidebar() {
     document.getElementById("main").style.marginLeft = "25%";
@@ -16,41 +16,51 @@ function close_sidebar() {
 
 function salvar() {
     const index = parseInt(document.getElementById('editIndex').value);
-    const nome  = document.getElementById('inputNome').value.trim();
-    const curso = document.getElementById('inputCurso').value.trim();
-    const email = document.getElementById('inputEmail').value.trim();
+    const vaga  = document.getElementById('inputVaga').value.trim();
+    const setor = document.getElementById('inputSetor').value.trim();
+    const salario = document.getElementById('inputSalario').value.trim();
+    const turno = document.getElementById('inputTurno').value.trim();
+    const gestor = document.getElementById('inputGestor').value.trim();
+    const status = document.getElementById('inputStatus').value.trim();
+    const abertura = document.getElementById('inputAbertura').value.trim();
 
-    if (!nome || !curso || !email) {
+    if (!vaga || !setor || !salario || !turno || !gestor || !status || !abertura) {
         alert('Preencha todos os campos!');
         return;
     }
 
     if (index === -1) {
         // Adicionar
-        alunos.push({ nome, curso, email });
+        recrutamento.push({ vaga, setor, salario, turno, gestor, status, abertura });
     } else {
         // Editar
-        alunos[index] = { nome, curso, email };
+        recrutamento[index] = { vaga, setor, salario, turno, gestor, status, abertura };
     }
 
-    localStorage.setItem('alunos', JSON.stringify(alunos));
+    localStorage.setItem('recrutamento', JSON.stringify(recrutamento));
     limparForm();
     renderTabela();
 }
 
 function excluir(index) {
     if (!confirm('Deseja excluir este aluno?')) return;
-    alunos.splice(index, 1);
-    localStorage.setItem('alunos', JSON.stringify(alunos));
+    recrutamento.splice(index, 1);
+    localStorage.setItem('recrutamento', JSON.stringify(recrutamento));
     renderTabela();
 }
 
+// vaga, setor, salario, turno, gestor, status, abertura
+
 function editar(index) {
-    const a = alunos[index];
+    const a = recrutamento[index];
     document.getElementById('editIndex').value = index;
-    document.getElementById('inputNome').value  = a.nome;
-    document.getElementById('inputCurso').value = a.curso;
-    document.getElementById('inputEmail').value = a.email;
+    document.getElementById('inputVaga').value  = a.vaga;
+    document.getElementById('inputSetor').value = a.setor;
+    document.getElementById('inputSalario').value = a.salario;
+    document.getElementById('inputTurno').value = a.turno;
+    document.getElementById('inputGestor').value = a.gestor;
+    document.getElementById('inputStatus').value = a.status;
+    document.getElementById('inputAbertura').value = a.abertura;
     document.getElementById('btnCancelar').style.display = 'inline-block';
 }
 
@@ -58,11 +68,17 @@ function cancelar() {
     limparForm();
 }
 
+// vaga, setor, salario, turno, gestor, status, abertura
+
 function limparForm() {
     document.getElementById('editIndex').value  = -1;
-    document.getElementById('inputNome').value  = '';
-    document.getElementById('inputCurso').value = '';
-    document.getElementById('inputEmail').value = '';
+    document.getElementById('inputVaga').value  = '';
+    document.getElementById('inputSetor').value = '';
+    document.getElementById('inputSalario').value = '';
+    document.getElementById('inputTurno').value = '';
+    document.getElementById('inputGestor').value = '';
+    document.getElementById('inputStatus').value = '';
+    document.getElementById('inputAbertura').value = '';
     document.getElementById('btnCancelar').style.display = 'none';
 }
 
@@ -70,18 +86,24 @@ function renderTabela() {
     const corpo = document.getElementById('corpoTabela');
     corpo.innerHTML = '';
 
-    if (alunos.length === 0) {
+    if (recrutamento.length === 0) {
         corpo.innerHTML = '<tr><td colspan="5" style="text-align:center">Nenhum aluno cadastrado</td></tr>';
         return;
     }
 
-    alunos.forEach((a, i) => {
+    // vaga, setor, salario, turno, gestor, status, abertura
+
+    recrutamento.forEach((a, i) => {
         corpo.innerHTML += `
             <tr>
                 <td>${i + 1}</td>
-                <td>${a.nome}</td>
-                <td>${a.curso}</td>
-                <td>${a.email}</td>
+                <td>${a.vaga}</td>
+                <td>${a.setor}</td>
+                <td>${a.salario}</td>
+                <td>${a.turno}</td>
+                <td>${a.gestor}</td>
+                <td>${a.status}</td>
+                <td>${a.abertura}</td>
                 <td>
                     <button class="btn-editar" onclick="editar(${i})"><i class="fa-solid fa-pencil"></i> Editar</button>
                     <button class="btn-excluir" onclick="excluir(${i})"><i class="fa-solid fa-trash"></i> Excluir</button>

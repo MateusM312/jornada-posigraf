@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alunos - POSIGRAF</title>
+    <title>Gerenciar Recrutamento & Seleção - POSIGRAF</title>
     <link rel="stylesheet" href="../styles/adm-style.css">
     <link rel="stylesheet" href="../styles/recru-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -11,7 +11,7 @@
 <body>
     <div id="main">
         <header id="headerpage">
-            <h1> <img src="../img/icone-posigraf.png"w width="50"  alt="marca-posigraf.png"><p onclick="window.location.href='../../adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
+            <h1> <img src="../img/icone-posigraf.png"w width="50"  alt="marca-posigraf.png"><p onclick="window.location.href='../pages/adm.html'" style="cursor: pointer;">POSIGRAF</p> <button class="bar-open" onclick="open_sidebar()" id="openav"><i class="fa-solid fa-bars"></i></button></h1>
             <a href="../index.html"><button id="sair">sair</button></a>
         </header>
 
@@ -19,34 +19,47 @@
             <button class="sidebar-button" onclick="close_sidebar()">Fechar <i class="fa-solid fa-xmark"></i></button>
             <!-- adicionar novos links -->
             <a href="adm.html" class="bar-item">Inicio <i class="fa-solid fa-house-chimney-user"></i></a>
-            <a href="alunos/alunos.html" class="bar-item">Alunos <i class="fa-solid fa-school"></i></a>
-            <a href="recrutamento-selecao/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
-            <a href="headcount/headcount.html" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
+            <a href="../pages/alunos.html" class="bar-item">Documentos Automatizados <i class="fa-solid fa-school"></i></a>
+            <a href="../pages/recru.html" class="bar-item">Recrutamento e Seleção <i class="fa-solid fa-clipboard-user"></i></a>
+            <a href="../pages/headcount.html" class="bar-item">Headcount <i class="fa-solid fa-person"></i></a>
         </div>
 
 
         <div class="container">
-            <h2>Gerenciar Alunos</h2>
+            <h2>Gerenciar Recrutamento & Seleção</h2>
+
+            <!-- vaga, setor, salário, turno, gestor, status, data abertura -->
+
 
             <!-- Formulário -->
             <div class="form-card">
                 <input type="hidden" id="editIndex" value="-1">
-                <input type="text" id="inputNome" placeholder="Nome">
-                <input type="text" id="inputCurso" placeholder="Curso">
-                <input type="email" id="inputEmail" placeholder="E-mail">   
+                <input type="text" id="inputVaga" placeholder="Vaga">
+                <input type="text" id="inputSetor" placeholder="Setor">
+                <input type="text" id="inputSalario" placeholder="Salário">   
+                <input type="text" id="inputTurno" placeholder="Turno">   
+                <input type="text" id="inputGestor" placeholder="Gestor">   
+                <input type="text" id="inputStatus" placeholder="Status">   
+                <input type="text" id="inputAbertura" placeholder="Data de Abertura">   
                 <button onclick="salvar()">Salvar</button>
                 <button id="btnCancelar" onclick="cancelar()" style="display:none">Cancelar</button>
             </div>
+
+            <!-- vaga, setor, salário, turno, gestor, status, data abertura -->
 
             <!-- Tabela -->
             <table id="tabelaAlunos">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome</th>
-                        <th>Curso</th>
-                        <th>E-mail</th>
-                        <th>Ações</th>
+                        <th>Vaga</th>
+                        <th>Setor</th>
+                        <th>Salário</th>
+                        <th>Turno</th>
+                        <th>Gestor</th>
+                        <th>Status</th>
+                        <th>Data Abertura</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody id="corpoTabela"></tbody>
